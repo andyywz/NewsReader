@@ -2,9 +2,9 @@ class FeedsController < ApplicationController
   def index
     @feeds = Feed.all
     @feeds.each do |feed|
-      if feed.updated_at < 2.seconds.ago
+      if feed.updated_at < 2.minutes.ago
         feed.reload
-        feed.touch # feed.update_at = Time.now
+        feed.touch
       end
     end
 

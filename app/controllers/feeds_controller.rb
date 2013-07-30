@@ -1,5 +1,14 @@
 class FeedsController < ApplicationController
   def index
+    Feed.all.each do |feed|
+      t = Time.now
+      last_update = feed.updated_at
+      if t - last_update > 120
+        feed.reload
+        feed.updated_at = Time.now
+      end
+    end
+
     respond_to do |format|
       format.html { render :index }
       format.json { render :json => Feed.all }

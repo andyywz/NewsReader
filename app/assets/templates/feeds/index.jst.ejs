@@ -1,0 +1,11 @@
+<h1 class='feed_index'>All the feeds</h1>
+
+<ul>
+  <% feeds.each(function (model, index) { %>
+    <li class="feed_title">
+      <a href="#/feeds/<%= model.escape('id') %>/entries">
+        <%= model.escape('title') %>
+      </a>
+    </li>
+  <% }); %>
+</ul>

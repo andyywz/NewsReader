@@ -1,0 +1,19 @@
+<h1 class='feed_show'><%= feed.escape('title') %></h1>
+<button class="refresh">Refresh</button>
+
+<table class="feed_entries">
+  <tr>
+    <th>
+      Entry
+    </th>
+  </tr>
+  <% feed.entries.each(function (model,index) { %>
+  <tr>
+    <td>
+      <a href="<%= model.escape('link') %>">
+        <%= model.escape('title') %>
+      </a>
+    </td>
+  </tr>
+  <% }); %>
+</table>

@@ -8,7 +8,11 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'simple-rss'
 
+gem 'backbone-on-rails'
+
 require 'open-uri'
+
+require 'json'
 
 # Gems used only for assets and not required
 # in production environments by default.

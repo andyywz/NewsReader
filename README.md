@@ -2,5 +2,5 @@
 
 This application allows users to manage the news feeds they are interested in.
 
-### TODO
+## TODO
 * Add CSS Styling.
